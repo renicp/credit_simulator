@@ -1,13 +1,13 @@
 package com.simulator.command;
 
-import com.simulator.controller.LoanController;
-import com.simulator.view.LoanView;
+import com.simulator.controller.Controller;
+import com.simulator.view.View;
 
 public class UploadCommand implements Command {
-    private LoanController controller;
-    private LoanView view;
+    private Controller controller;
+    private View view;
 
-    public UploadCommand(LoanController controller, LoanView view) {
+    public UploadCommand(Controller controller, View view) {
         this.controller = controller;
         this.view = view;
     }

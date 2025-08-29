@@ -3,7 +3,7 @@ package com.simulator.view;
 import java.util.List;
 import java.util.Scanner;
 
-public class LoanView {
+public class LoanView implements View {
     private Scanner scanner = new Scanner(System.in);
 
     public String ask(String prompt) {

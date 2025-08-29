@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoanCalculator {
+public class LoanCalculator implements LoanCalculatorService {
     public List<String> calculateInstallments(Loan loan) {
         List<String> results = new ArrayList<>();
 

@@ -1,11 +1,11 @@
 package com.simulator.command;
 
-import com.simulator.controller.LoanController;
+import com.simulator.controller.Controller;
 
 public class CalculationCommand implements Command {
-    private LoanController controller;
+    private Controller controller;
 
-    public CalculationCommand(LoanController controller) {
+    public CalculationCommand(Controller controller) {
         this.controller = controller;
     }
 

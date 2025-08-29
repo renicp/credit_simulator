@@ -1,13 +1,13 @@
 package com.simulator.command;
 
-import com.simulator.controller.LoanController;
-import com.simulator.view.LoanView;
+import com.simulator.controller.Controller;
+import com.simulator.view.View;
 
 public class CommandFactory {
-    private LoanController controller;
-    private LoanView view;
+    private Controller controller;
+    private View view;
 
-    public CommandFactory(LoanController controller, LoanView view) {
+    public CommandFactory(Controller controller, View view) {
         this.controller = controller;
         this.view = view;
     }
@@ -18,10 +18,10 @@ public class CommandFactory {
                 return new CalculationCommand(controller);
             case "upload":
                 return new UploadCommand(controller, view);
-            case "load":
-                return new LoadFromClientCommand(controller, view);
             case "show":
                 return new ShowMenuCommand();
+            case "load":
+                return new LoadFromExternalApiCommand(controller, view);
             default:
                 return null;
         }

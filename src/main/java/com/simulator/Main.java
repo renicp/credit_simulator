@@ -2,15 +2,20 @@ package com.simulator;
 
 import java.util.Scanner;
 
+import com.simulator.api.HttpClient;
+import com.simulator.api.GetDataLoan;
 import com.simulator.command.Command;
 import com.simulator.command.CommandFactory;
+import com.simulator.controller.Controller;
 import com.simulator.controller.LoanController;
 import com.simulator.view.LoanView;
+import com.simulator.view.View;
 
 public class Main {
     public static void main(String[] args) {
-        LoanView view = new LoanView();
-        LoanController controller = new LoanController(view);
+        View view = new LoanView();
+        HttpClient httpClient = new GetDataLoan();
+        Controller controller = new LoanController(view, httpClient);
         CommandFactory factory = new CommandFactory(controller, view);
 
         Scanner sc = new Scanner(System.in);

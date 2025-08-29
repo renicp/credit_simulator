@@ -1,20 +1,20 @@
 package com.simulator.command;
 
-import com.simulator.controller.LoanController;
-import com.simulator.view.LoanView;
+import com.simulator.controller.Controller;
+import com.simulator.view.View;
 
-public class LoadFromClientCommand implements Command {
-    private LoanController controller;
-    private LoanView view;
+public class LoadFromExternalApiCommand implements Command {
+    private Controller controller;
+    private View view;
 
-    public LoadFromClientCommand(LoanController controller, LoanView view) {
+    public LoadFromExternalApiCommand(Controller controller, View view) {
         this.controller = controller;
         this.view = view;
     }
 
     @Override
     public void execute() {
-        controller.loadFromServer();
+        controller.loadFromExternalApi();
     }
 
     @Override
