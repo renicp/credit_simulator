@@ -1,10 +1,12 @@
-package com.simulator.service;
+package com.simulator.service.impl;
 
-import com.simulator.model.Loan;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.simulator.model.Loan;
+import com.simulator.service.LoanCalculatorService;
 
 public class LoanCalculator implements LoanCalculatorService {
     public List<String> calculateInstallments(Loan loan) {

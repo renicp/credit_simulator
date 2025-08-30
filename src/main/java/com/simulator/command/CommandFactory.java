@@ -1,5 +1,8 @@
 package com.simulator.command;
 
+import com.simulator.command.impl.CalculationCommand;
+import com.simulator.command.impl.LoadFromExternalApiCommand;
+import com.simulator.command.impl.ShowMenuCommand;
 import com.simulator.controller.Controller;
 import com.simulator.view.View;
 
@@ -16,8 +19,6 @@ public class CommandFactory {
         switch (cmd.toLowerCase()) {
             case "new":
                 return new CalculationCommand(controller);
-            case "upload":
-                return new UploadCommand(controller, view);
             case "show":
                 return new ShowMenuCommand();
             case "load":

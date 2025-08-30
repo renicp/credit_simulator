@@ -1,7 +1,9 @@
-package com.simulator.view;
+package com.simulator.view.impl;
 
 import java.util.List;
 import java.util.Scanner;
+
+import com.simulator.view.View;
 
 public class LoanView implements View {
     private Scanner scanner = new Scanner(System.in);

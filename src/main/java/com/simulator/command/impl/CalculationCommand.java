@@ -1,5 +1,6 @@
-package com.simulator.command;
+package com.simulator.command.impl;
 
+import com.simulator.command.Command;
 import com.simulator.controller.Controller;
 
 public class CalculationCommand implements Command {

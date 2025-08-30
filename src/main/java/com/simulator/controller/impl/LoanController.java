@@ -1,19 +1,20 @@
-package com.simulator.controller;
+package com.simulator.controller.impl;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.simulator.api.HttpClient;
+import com.simulator.controller.Controller;
+import com.simulator.model.ApiResponse;
 import com.simulator.model.Loan;
 import com.simulator.model.Vehicle;
 import com.simulator.model.VehicleFactory;
-import com.simulator.model.ApiResponse;
 import com.simulator.service.LoanCalculatorService;
-import com.simulator.service.LoanCalculator;
+import com.simulator.service.impl.LoanCalculator;
 import com.simulator.view.View;
-import com.simulator.api.HttpClient;
-import com.google.gson.Gson;
 
 public class LoanController implements Controller {
     private View view;

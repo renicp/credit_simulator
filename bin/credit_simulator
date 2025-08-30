@@ -1,0 +1,16 @@
+#!/bin/bash
+IMAGE="renicp/credit_simulator:latest"
+if [ $# -gt 0 ]; then
+  INPUT_FILE="$1"
+
+  if [ ! -f "$INPUT_FILE" ]; then
+    echo "Error: File '$INPUT_FILE' tidak ditemukan."
+    exit 1
+  fi
+
+  docker run --rm -it \
+    -v "$(pwd)/$INPUT_FILE:/app/$INPUT_FILE" \
+    "$IMAGE" "$INPUT_FILE"
+else
+  docker run --rm -it "$IMAGE"
+fi
